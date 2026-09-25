@@ -14,7 +14,7 @@ import {PassportModule} from "@nestjs/passport";
 
 @Module({
     imports: [
-        PassportModule,
+        PassportModule.register({}),
         JwtModule.registerAsync(jwtConfig.asProvider()),
         ConfigModule.forFeature(jwtConfig),
         ConfigModule.forFeature(refreshConfig),
